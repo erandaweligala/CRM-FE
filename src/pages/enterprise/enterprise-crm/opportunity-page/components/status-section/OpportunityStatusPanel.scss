@@ -1,0 +1,97 @@
+.status-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 100%;
+
+  .stage-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .stage-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 36px;
+    height: 30px;
+    border: none;
+    min-width: max(9.6vw, 20px);
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 8% 50%);
+    background-color: #e0e0e0;
+    color: black;
+
+    &.first {
+      border-radius: 20px 0 0 20px;
+      clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%);
+    }
+
+    &.last {
+      border-radius: 0 20px 20px 0;
+      clip-path: polygon(0% 0%, 90% 0%, 100% 5%, 100% 100%, 0% 100%, 10% 50%);
+    }
+
+    &.current {
+      background-color: #13525b;
+      color: white;
+    }
+
+    &.selected {
+      background-color: #e6f0ff;
+    }
+
+    &.hovered {
+      opacity: 0.9;
+    }
+
+    &.not-allowed {
+      cursor: not-allowed;
+    }
+
+    &.allowed {
+      cursor: pointer;
+    }
+  }
+
+  .change-stage-btn {
+    margin-left: 16px;
+    padding: 6px 12px;
+    max-width: 200px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 12px;
+
+    &.won {
+      background-color: #235a0f;
+    }
+
+    &.lost {
+      background-color: #840202;
+    }
+
+    &.next {
+      background-color: #15416d;
+      cursor: pointer;
+    }
+
+    &.disabled {
+      background-color: #a0a0a0;
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}

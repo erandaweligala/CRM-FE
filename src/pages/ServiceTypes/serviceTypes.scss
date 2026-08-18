@@ -1,0 +1,36 @@
+.terms-container {
+    font-family: "Poppins";
+    padding: 5px;
+  
+    .terms-card {
+        background: #ffffff;
+        padding: 5px 0px;
+        margin: 0 25px;
+        max-width: 1700px;
+    
+        .terms-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 4px;
+          padding: 0 0;
+           
+    
+          .title {
+            margin: 0;
+            font: normal normal 600 14px/21px Poppins;
+            color: hsl(0, 0%, 0%);
+          }
+        }
+
+        .description {
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 20px;
+            margin-top: 1px;
+            margin-left: 0px;
+          }
+        }
+
+
+}

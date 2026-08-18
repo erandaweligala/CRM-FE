@@ -1,0 +1,54 @@
+.kanban-scroll-container {
+    display: grid;
+    width: 100%;
+    height: calc(100vh - 180px);
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+  
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+  
+  .kanban-board {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    width: fit-content;
+    min-height: 100%;
+  }
+  
+  
+  .kanban-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    width: 250px;
+    max-width: 250px;
+    background: #F4F4F4;
+    border-radius: 8px;
+    flex-shrink: 0;
+    height: 100%;
+  }
+  
+  
+  .kanban-empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  

@@ -1,0 +1,257 @@
+.first-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+  }
+  //.ant-card-type-inner .ant-card-head{
+  //  background-color: white;
+  //}
+  
+  .drawer-close-icon{
+    padding: 10px !important;
+  }
+  
+  .common-width{
+    width: 50%;
+    background-color: white;
+  }
+  
+  .quote-description{
+    width: 100% !important;
+    height: 40px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding-bottom: -5px !important;
+  }
+  
+  .common-font{
+    font: normal normal medium 12px/26px Poppins,sans-serif;
+    color: #000000 !important;
+  }
+  
+  .product-heading{
+    font: normal normal 600 14px/21px Poppins,sans-serif;
+  
+  }
+  
+  .card-item-product{
+    width: 100% !important;
+    min-height: 55px !important;
+    padding: 5px 5px 5px 8px !important;
+  }
+  
+  .card-item{
+    width: 100% !important;
+    height: 40px !important;
+    padding: 5px 5px 5px 8px !important;
+  }
+  
+  .collapse-panel-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FAFAFA;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .quote-description-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .description-header{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .description-header-buttons{
+    display: flex;
+    gap: 5px;
+    justify-items: center;
+    margin-left: 5px;
+    margin-bottom: 8px;
+    .edit-product-btn{
+      width: 200px;
+    }
+  }
+  
+  
+  .description-alternation-header-buttons{
+    display: flex;
+    gap: 5px;
+    justify-items: center;
+    margin-left: 20px;
+  }
+  
+  .description-product-header-buttons {
+      display: flex;
+      gap: 5px;
+      justify-items: center;
+      margin-left: 20px;
+  }
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    margin-bottom: 40px;
+  }
+  
+  
+  .card-grid{
+    width: 100% !important;
+    background-color: white !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .card-item-wrapper {
+    width: calc(50% - (2 * 16px)); /* Adjust the width and margin as needed */
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .card-item-wrapper:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+  
+  .quote-item-price{
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    margin-bottom: 15px;
+  }
+  
+  .ant-card .ant-card-grid{
+    padding:12px;
+  }
+  
+  .innerDrawerCollapse {
+    margin-top: 5px;
+    background-color: transparent;
+  }
+  .description-content{
+    width: 100%;
+  }
+  .description-content .ant-descriptions-item-label span{
+    color: black;
+  }
+  
+  .ant-descriptions-item-content span{
+    color: black;
+  }
+  .footer-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    gap: 10px;
+  
+  }
+  
+  .ant-collapse-header{
+    height: 46px;
+  }
+  
+  .card-title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  //cancel button
+  .customized-cancel-button.ant-btn-default {
+    background-color: #FF9D9D33;
+    border: 1px solid #FF8E8E0D;
+    color: #FD8080;
+    font-weight: 500;
+  }
+  .customized-generate-pdf-button{
+      background-image: url('../../components/quotation-tab-view-status/components/images/pdf1.svg') ;
+      background-size: 16px;
+      background-repeat: no-repeat;
+      padding-left: 30px;
+      background-position: 8px center ;
+    &:hover,
+    &:focus,
+    &:active {
+      background-image: url('../../components/quotation-tab-view-status/components/images/pdf1.svg') !important ;
+      background-size: 16px !important ;
+      background-repeat: no-repeat !important ;
+      padding-left: 30px !important ;
+      background-position: 8px center !important ;
+    }
+  }
+  
+  .customized-view-pdf-button{
+    background-image: url('../../components/quotation-tab-view-status/components/images/pdf1.svg') ;
+    background-size: 10px;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    padding-left: 25px;
+    margin-right: 6px;
+    height: 24px;
+    background-position: 8px center ;
+    background-color: rgba(0, 91, 158, 0.102);
+  
+  }
+  
+  .template-img {
+    width: 170px;
+    height: 200px;
+    position: relative;
+    border-radius: 5px;
+    background-image: url("../../../../../../assets/images/template example.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  .selected-template {
+    opacity: 0.3;
+  }
+  
+  .tick-mark {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .template-text{
+    margin-left: 5px;
+  }
+  
+  .add-overall-discount-label{
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Poppins,sans-serif;
+  
+  }
+  
+  .custom-collapse .ant-collapse-content-box {
+    padding: 0 !important;
+  }
+  
+  .innerCollapse{
+    margin-top: 40px;
+    border-radius: 0;
+    .collapse-content{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .ant-collapse-item:last-child > .ant-collapse-content {
+      border-radius: 0;
+    }
+  }
+  
+  .drawer-footer-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }

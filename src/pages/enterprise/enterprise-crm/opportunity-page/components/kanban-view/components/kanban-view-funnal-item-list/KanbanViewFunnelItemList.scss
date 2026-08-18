@@ -1,0 +1,17 @@
+.kanban-view-funnel-item-list {
+  .kanban-view-funnel-item {
+    background-color: #F2F6FA;
+    height: 50px;
+    border-radius: 5px;
+    .inner-container {
+      width: 212px;
+      height: 139px;
+      padding: 8px;
+      .single-data-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.inner-table-steps{
+
+
+
+// ORDER MANAGEMENT
+// order log step style - finish step
+.order-log-step-style>.finish-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title,
+.order-log-step-style>.finish-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description .step-status {
+    color: #00635A;
+}
+
+// order log step style - partial step
+.order-log-step-style>.partial-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title,
+.order-log-step-style>.partial-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description .step-status {
+    color: #F0973E;
+
+}
+
+// order log step style - in progress step
+.order-log-step-style>.process-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title,
+.order-log-step-style>.process-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description .step-status {
+    color: #302aad;
+}
+
+.order-log-step-style>.finish-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title,
+.order-log-step-style>.partial-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title,
+.order-log-step-style>.process-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title,
+.order-log-step-style>.error-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title,
+.order-log-step-style>.wait-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+    line-height: normal;
+    top: 4px;
+
+    &:after {
+        top: 8px;
+    }
+}
+
+.order-log-step-style>.finish-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description p,
+.order-log-step-style>.partial-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description p,
+.order-log-step-style>.process-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description p,
+.order-log-step-style>.error-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description p,
+.order-log-step-style>.wait-status>.ant-steps-item-container>.ant-steps-item-content>.ant-steps-item-description p {
+    font-size: 10px;
+    margin-bottom: 4px;
+    line-height: normal;
+    color: #000000;
+
+    &.step-status {
+        margin-bottom: 10px;
+    }
+}
+}

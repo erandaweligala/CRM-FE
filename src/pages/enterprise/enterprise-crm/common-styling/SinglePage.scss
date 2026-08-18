@@ -1,0 +1,48 @@
+.view-single-account {
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  height: calc(100vh - 94px);
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 12px;
+  padding-bottom: 12px;
+
+  .fixed-navigation-container {
+    width: 200px;
+    background: transparent;
+    position: fixed;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .navigation-item {
+    text-align: left;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+      background: lightgray;
+    }
+    &.selected {
+      background: #00675A1A;
+      color: #00675A;
+      .inner-container {
+        border-left: 2px solid #00675A;
+      }
+    }
+    height: 32px;
+    padding: 4px;
+    .inner-container {
+      height: 100%;
+      line-height: 18px;
+      margin-left: 4px;
+      padding: 6px;
+      display: block;
+    }
+  }
+  .descriptions-margin {
+      padding-bottom: 16px;
+  }
+}

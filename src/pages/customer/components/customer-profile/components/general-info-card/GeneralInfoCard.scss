@@ -1,0 +1,74 @@
+
+.general-info-card {
+  border: 1px solid #F2F2F2;
+  border-radius: 4px;
+  background: white;
+
+  .header-section {
+    background-color: #F8F9FA;
+    padding: 12px;
+
+    .image-and-name-container {
+      display: flex;
+      align-items: center;
+      .image-border{
+        border: 3px solid #DBDBDB;
+        border-radius: 111px;
+      }
+
+      .name {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+
+      .point {
+        color: #696969;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .body-section {
+    border-top: 1px solid #D9D9D9;
+    padding: 16px 12px;
+    background: white;
+   
+  }
+  .footer-section {
+    margin: 0 12px 16px 12px;
+    .header {
+      height: 38px;
+      border-bottom: 1px solid #D9D9D9;
+      background-color: #F8F9FA;
+    }
+    .body {
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .view-square-button-pre-defined {
+    width: 90px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: rgba(20, 87, 148, 0.05);
+    border: 1px solid #14579433;
+    margin-top: 4;
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 12px;
+    color: #145794;
+    text-align: left;
+    font-weight: 600;
+    line-height: 21px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+

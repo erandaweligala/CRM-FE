@@ -1,0 +1,16 @@
+.page-no-data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+  &.default-height {
+    height: calc(100vh - 200px);
+  }
+  .description {
+    width: 450px;
+    text-align: center;
+    line-height: 18px
+  }
+}

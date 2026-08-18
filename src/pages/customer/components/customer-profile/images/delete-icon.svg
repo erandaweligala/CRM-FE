@@ -1,0 +1,8 @@
+<svg id="Delete" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <rect id="Rectangle_17715" data-name="Rectangle 17715" width="40" height="40" fill="rgba(217,217,217,0)"/>
+  <g id="Group_44699" data-name="Group 44699" transform="translate(-959.85 -394.306)">
+    <path id="Path_33324" data-name="Path 33324" d="M267.612,7.32V22.626a.609.609,0,0,0,.609.609h10.891a.609.609,0,0,0,.609-.609V7.32ZM267,5.492a1.219,1.219,0,0,0-1.219,1.218V22.626a2.437,2.437,0,0,0,2.437,2.437h10.891a2.437,2.437,0,0,0,2.437-2.437V6.711a1.218,1.218,0,0,0-1.219-1.218Z" transform="translate(706.318 400.549)" fill="#005999" fill-rule="evenodd"/>
+    <path id="Path_33325" data-name="Path 33325" d="M262.5,1.414A.914.914,0,0,1,263.414.5h17.668a.914.914,0,0,1,0,1.828H263.414A.914.914,0,0,1,262.5,1.414Z" transform="translate(707.602 402.5)" fill="#005999" fill-rule="evenodd"/>
+    <path id="Path_33326" data-name="Path 33326" d="M273.409,20.414a.914.914,0,0,1,.914-.914H279.2a.914.914,0,1,1,0,1.828h-4.874A.914.914,0,0,1,273.409,20.414Z" transform="translate(703.339 395.076)" fill="#005999" fill-rule="evenodd"/>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+
+.login-page{
+
+    .image-wrapper{
+        height: 100vh;
+        background: #00635b;
+    }
+
+    .leftImg {
+        margin: 0 auto;
+      }
+
+      
+    .details-container{
+        align-items: center;
+        text-align: left;
+    }
+
+    .hello-there{
+        font-size: 24px;
+        font-weight: 400;
+    }
+    .welcome-to{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .digital-telco{
+        white-space: pre;
+        color:#093D71;
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: #093D71;
+        border-color: #093D71;
+    }
+    .login-btn{
+        height: 32px;
+    }
+
+    .link{
+        color: #093D71;
+    }
+    .account{
+        white-space: pre;
+    }
+}

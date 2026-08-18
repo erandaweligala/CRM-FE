@@ -1,0 +1,1 @@
+export {default} from './DigitalBssTagLabel_Temp.tsx';

@@ -1,0 +1,162 @@
+@import "./styles/loading-spinner";
+
+html {
+  background-color: #FDFDFD;
+}
+
+body {
+  height: auto;
+}
+
+.default-border {
+  border: 1px solid #D9D9D9;
+}
+
+.svg-edit-button {
+  &:hover {
+    cursor: pointer;
+    scale: 1.2;
+  }
+}
+
+.svg-delete-button {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -5px;
+
+  &:hover {
+    cursor: pointer;
+    scale: 1.2;
+  }
+}
+
+.page-body {
+  position: fixed;
+  top: 94px;
+  overflow: auto;
+  width: 100%;
+  height: calc(100vh - 94px);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 12px;
+}
+
+// CSS Class for Breadcrumb right component
+.breadcrumb-right-content {
+  margin-right: 35px;
+}
+
+// Description Issue Fixing
+.ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-content,
+.ant-descriptions.ant-descriptions-bordered .ant-descriptions-item-label,
+.ant-descriptions.ant-descriptions-bordered > .ant-descriptions-view .ant-descriptions-row > .ant-descriptions-item-label,
+.ant-descriptions.ant-descriptions-bordered > .ant-descriptions-view .ant-descriptions-row > .ant-descriptions-item-content {
+  padding: 9px 16px;
+}
+
+.ant-menu-light .ant-menu-item,
+.ant-menu-light>.ant-menu .ant-menu-item,
+.ant-menu-light .ant-menu-submenu-title,
+.ant-menu-light>.ant-menu .ant-menu-submenu-title {
+  color: white;
+}
+
+// Tree Node Overwrite
+// Enterprice SalfCare Page
+
+.ant-tree {
+  font-size: 12px;
+  color: black;
+}
+
+.ant-tree .ant-tree-treenode {
+  width: 100%;
+}
+
+.ant-tree .ant-tree-node-content-wrapper {
+  flex: 1 0 auto;
+}
+
+.ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected,
+.ant-tree .ant-tree-checkbox + span.ant-tree-node-selected {
+  background-color: #1E6059;
+  color: white;
+}
+
+.ant-tree .ant-tree-treenode-selected .ant-tree-indent {
+  background: #1E6059;
+}
+
+.ant-tree .ant-tree-treenode-selected .ant-tree-switcher-noop {
+  background: #1E6059;
+}
+
+.ant-tree .ant-tree-node-content-wrapper,
+.ant-tree .ant-tree-checkbox + span {
+  border-radius: 0;
+}
+
+// button hover color updated
+.ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover {
+  opacity: 0.9;
+  background: #093D71;
+}
+
+.digital-bss-basic-collapse.ant-collapse {
+  border-bottom-width: 1px;
+}
+.collapsed-content {
+  .digital-bss-basic-table .ant-table-thead > tr > th {
+      background-color: #f2f4f5;
+  }
+}
+.custom-descriptions .ant-descriptions-item-label {
+  font-size: 12px;
+  font-weight: 1000;
+  color: black;
+}
+
+.custom-descriptions .ant-descriptions-item-content {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.custom-descriptions .ant-descriptions-row > th,
+.custom-descriptions .ant-descriptions-row > td {
+  height: 35px !important;
+}
+ .ant-form-item {
+  margin-bottom: 16px;
+}
+// Apply bss-ui-drawer-footer class to the footer of the drawer
+
+.ant-drawer .bss-ui-drawer-footer {
+  border-top: 1px solid #E8E8E8;
+  bottom: 0;
+  padding: 10px 16px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  text-align: right;
+  background-color: #F8F9FA;
+}
+
+.ant-drawer .ant-drawer-body:has(.bss-ui-drawer-footer) {
+  margin-bottom: 48px
+}
+
+.ant-drawer .ant-drawer-close {
+  width: auto;
+}
+
+.ant-drawer .ant-drawer-header {
+  padding: 12px 20px;
+  background: #F8F9FA;
+}
+.page{
+  .page-container{
+      margin-top: 16px;
+      margin-right: 35px;
+      margin-left: 35px;
+  }
+}

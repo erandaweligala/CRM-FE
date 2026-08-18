@@ -1,0 +1,10 @@
+enum CustomerProfileTabsEnum {
+    CUSTOMER_OVERVIEW = "CUSTOMER_OVERVIEW",
+    CONNECTION_OVERVIEW = "CONNECTION_OVERVIEW",
+    CUSTOMER_PROFILE = "CUSTOMER_PROFILE",
+    ACCOUNT = "ACCOUNT",
+    PRODUCTS = "PRODUCTS",
+    ORDERS = "ORDERS",
+}
+
+export default CustomerProfileTabsEnum

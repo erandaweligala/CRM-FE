@@ -1,0 +1,50 @@
+.digital-bss-text,
+.digital-bss-label-horizontal {
+
+  color: black;
+
+  &.xs {
+    font-size: 8px;
+  }
+
+  &.sm {
+    font-size: 10px;
+  }
+
+  &.md {
+    font-size: 12px;
+  }
+
+  &.lg {
+    font-size: 14px;
+  }
+
+  &.xl {
+    font-size: 16px;
+  }
+
+  &.regular {
+    font-weight: 400;
+  }
+
+  &.medium {
+    font-weight: 500;
+  }
+
+  &.semi-bold {
+    font-weight: 600;
+  }
+
+  &.primary {
+    color: black;
+  }
+
+  &.secondary {
+    color: white;
+  }
+
+  &.tertiary {
+    color: gray;
+  }
+
+}

@@ -1,0 +1,114 @@
+.terms-container {
+  font-family: "Poppins";
+  padding: 5px;
+
+  .terms-card {
+    background: #ffffff;
+    padding: 5px 0px;
+    margin: 0 25px;
+    max-width: 1700px;
+
+    .terms-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+      padding: 0 0;
+       
+
+      .title {
+        margin: 0;
+        font: normal normal 600 14px/21px Poppins;
+        color: hsl(0, 0%, 0%);
+      }
+
+      .ant-btn-primary {
+        padding: 2px 8px;
+        border-radius: 4px;
+      }
+    }
+
+    .description {
+      font-size: 14px;
+      color: #000000;
+      margin-bottom: 20px;
+      margin-top: 1px;
+      margin-left: 0px;
+    }
+
+    .terms-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .term-card {
+        background-color: #ffffff;
+        border: 0.5px solid #00000033;
+        border-radius: 4px;
+        padding: 16px;
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+
+        .checkbox-wrapper {
+          flex-shrink: 0;
+          margin-right: 12px;
+          margin-top: 6px;
+        }
+        .term-text {
+          flex: 1;
+          font-size: 13px;
+          color: #000000;
+          margin-left: 10px;
+          white-space: pre-wrap; 
+          word-wrap: break-word; 
+          word-break: break-word; 
+          text-align: justify;
+          width: 85%;
+          max-width: 85%;
+        }
+        .term-actions {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+          display: flex;
+          gap: 8px;
+
+          .edit-icon,
+          .delete-icon {
+            padding: 5px;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #005999;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: #e6f4ff;
+              border-color: #1890ff;
+              color: #1890ff;
+            }
+          }
+        }
+      }
+    }
+
+    .terms-drawer {
+      .ant-drawer-body {
+        padding: 20px;
+        background-color: #fafafa;
+      }
+
+      .ant-btn {
+        font-weight: 500;
+      }
+
+      .ant-drawer-footer {
+        border-top: 1px solid #f0f0f0;
+        padding: 10px 20px;
+        background: #fff;
+      }
+    }
+  }
+}

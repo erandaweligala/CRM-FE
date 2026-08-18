@@ -1,0 +1,55 @@
+.kanban-view-funnel-single-item {
+  .kanban-view-funnel-single-item {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #00000014;
+    .inner-container {
+      width: 212px;
+      height: 130px;
+      padding: 8px;
+      .single-data-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+  .kanban-view-funnel-single-item:hover {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+  .kanban-single-column { 
+    overflow-y: auto;
+    height: 100%;
+    min-width: 250px;
+    max-width: 250px;
+    flex-shrink: 0;
+    padding: 8px;
+    background: #f4f4f4;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  
+  .kanban-card {
+    all: unset;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+}
+

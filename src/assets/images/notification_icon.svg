@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+  <g id="Group_8864" data-name="Group 8864" transform="translate(-414 -127.5)">
+    <rect id="Rectangle_4580" data-name="Rectangle 4580" width="27" height="27" rx="13.5" transform="translate(414 127.5)" fill="#fff4c6"/>
+    <g id="Icon_QR_Code" data-name="Icon — QR Code" transform="translate(418 130.5)">
+      <rect id="Rectangle_1571" data-name="Rectangle 1571" width="20" height="20" fill="#e3b700" opacity="0"/>
+      <path id="Path_3235" data-name="Path 3235" d="M-54.583-687.7h-5a.417.417,0,0,1-.417-.417v-5a.417.417,0,0,1,.417-.417h5a.417.417,0,0,1,.417.417v5A.417.417,0,0,1-54.583-687.7Zm-4.583-.833H-55V-692.7h-4.167Z" transform="translate(63.333 696.864)" fill="#e3b700"/>
+      <path id="Path_3236" data-name="Path 3236" d="M-54.583-669.7h-5a.417.417,0,0,1-.417-.417v-5a.416.416,0,0,1,.417-.417h5a.416.416,0,0,1,.417.417v5A.417.417,0,0,1-54.583-669.7Zm-4.583-.833H-55V-674.7h-4.167Z" transform="translate(63.333 686.363)" fill="#e3b700"/>
+      <path id="Path_3237" data-name="Path 3237" d="M-36.083-687.184h-2.5A.417.417,0,0,1-39-687.6v-2.521a.416.416,0,0,1,.417-.417h2.5a.416.416,0,0,1,.417.417v2.521A.417.417,0,0,1-36.083-687.184Zm-2.083-.833H-36.5V-689.7h-1.667Z" transform="translate(51.083 695.118)" fill="#e3b700"/>
+      <path id="Path_3238" data-name="Path 3238" d="M-36-674.7h-4.583a.417.417,0,0,1-.417-.417.416.416,0,0,1,.417-.417H-36a.416.416,0,0,1,.417.417A.417.417,0,0,1-36-674.7Z" transform="translate(52.25 686.363)" fill="#e3b700"/>
+      <path id="Path_3239" data-name="Path 3239" d="M-32.5-669.7h-2.083a.417.417,0,0,1-.417-.417.416.416,0,0,1,.417-.417H-32.5a.416.416,0,0,1,.417.417A.417.417,0,0,1-32.5-669.7Z" transform="translate(48.75 683.446)" fill="#e3b700"/>
+      <path id="Path_3240" data-name="Path 3240" d="M-36-667.362h-4.583a.417.417,0,0,1-.417-.417v-3.333a.416.416,0,0,1,.417-.417.416.416,0,0,1,.417.417v2.917H-36a.416.416,0,0,1,.417.417A.417.417,0,0,1-36-667.362Z" transform="translate(52.25 684.029)" fill="#e3b700"/>
+    </g>
+  </g>
+</svg>

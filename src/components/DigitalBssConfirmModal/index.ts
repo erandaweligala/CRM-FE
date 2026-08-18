@@ -1,0 +1,1 @@
+export {default} from './DigitalBssConfirmModal_Temp';

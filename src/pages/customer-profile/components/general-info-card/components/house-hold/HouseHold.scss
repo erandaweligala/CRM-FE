@@ -1,0 +1,32 @@
+
+.house-hold-item{
+
+    .account-status-active {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: #7FBE1B;
+        margin-right: 6px;
+      }
+    
+      .account-status-suspend {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: red;
+        margin-right: 6px;
+      }
+      .account-status-call-bar {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: blue;
+        margin-right: 4px;
+      }
+      .house-hold-content-section{
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+}

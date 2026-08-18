@@ -1,0 +1,1 @@
+export type EnterpriseCrmOperationsType = "VIEW" | "EDIT"

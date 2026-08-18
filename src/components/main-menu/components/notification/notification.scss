@@ -1,0 +1,50 @@
+.notification {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.notification-content {
+  width: 350px;
+  max-height: 400px;
+  padding: 8px;
+  overflow-y: auto;
+
+  .single-notification {
+    background: #F8FBFD;
+    margin-bottom: 8px;
+    padding: 8px;
+    display: flex;
+
+    .title {
+      color: #009BDF;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+
+    .message {
+      color: #000000A6;
+      font-size: 12px;
+    }
+
+    .time {
+      color: #ADADADA6;
+      font-size: 10px;
+    }
+
+    &:hover {
+      background: #e6e9ec;
+    }
+  }
+
+  .no-notification {
+    padding: 16px;
+    font-size: 12px;
+    color: #ADADADA6;
+  }
+}

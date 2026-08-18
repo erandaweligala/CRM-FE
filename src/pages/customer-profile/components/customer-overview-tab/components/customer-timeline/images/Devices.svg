@@ -1,0 +1,8 @@
+<svg id="Devices" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="Rectangle_17851" data-name="Rectangle 17851" width="24" height="24" fill="rgba(217,217,217,0)"/>
+  <g id="Group_44697" data-name="Group 44697" transform="translate(5.4 3.6)">
+    <path id="Path_33403" data-name="Path 33403" d="M8.5,8.744A1.244,1.244,0,0,1,9.744,7.5h7.462A1.244,1.244,0,0,1,18.45,8.744V20.47a1.244,1.244,0,0,1-1.244,1.244H9.744A1.244,1.244,0,0,1,8.5,20.47Zm1.244-.178a.178.178,0,0,0-.178.178V20.47a.178.178,0,0,0,.178.178h7.462a.178.178,0,0,0,.178-.178V8.744a.178.178,0,0,0-.178-.178Z" transform="translate(-5.657 -5.013)" fill="#00887f" fill-rule="evenodd"/>
+    <path id="Path_33404" data-name="Path 33404" d="M.5,1.744A1.244,1.244,0,0,1,1.744.5H9.206A1.244,1.244,0,0,1,10.45,1.744V3.7H9.384V1.744a.178.178,0,0,0-.178-.178H1.744a.178.178,0,0,0-.178.178V13.293a.178.178,0,0,0,.178.178H3.876v1.066H1.744A1.244,1.244,0,0,1,.5,13.293Z" transform="translate(-0.5 -0.5)" fill="#00887f" fill-rule="evenodd"/>
+    <path id="Path_33405" data-name="Path 33405" d="M17.5,13.033a.533.533,0,0,1,.533-.533H20.52a.533.533,0,0,1,0,1.066H18.033A.533.533,0,0,1,17.5,13.033Z" transform="translate(-11.459 -8.236)" fill="#00887f" fill-rule="evenodd"/>
+  </g>
+</svg>

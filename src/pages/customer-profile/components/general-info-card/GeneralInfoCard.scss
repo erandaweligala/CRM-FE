@@ -1,0 +1,61 @@
+
+.general-info-card {
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  background: white;
+
+  .header-section {
+    background-color: #F8F9FA;
+    padding: 12px;
+
+    .image-and-name-container {
+      display: flex;
+      align-items: center;
+
+      // .image-border-dynamic{
+      //   border: 3px solid #B7B5B0;
+      //   border-radius: 100%;
+      // }
+      .image-border{
+        border: 3px solid white;
+        border-radius: 100%;
+      }
+
+      .name {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+
+      .point {
+        color: #696969;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .body-section {
+    border-top: 1px solid #D9D9D9;
+    padding: 16px 12px;
+    background: white;
+  }
+
+  .footer-section {
+    // border: 1px solid #D9D9D9;
+    margin: 0 12px 16px 12px;
+    .header {
+      height: 38px;
+      border-bottom: 1px solid #D9D9D9;
+      background-color: #F8F9FA;
+    }
+    .body {
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+}
