@@ -7,8 +7,15 @@ import store, {authActions} from "../store/main-store";
 import {getLoginUrl, logout} from "./authentication-api.service";
 import {LogoutBroadcastChannel} from "./browser-broadcast.service";
 import {LocalStorageConstants} from "../constants/local-storage";
+import {AUTH_BYPASS_ENABLED} from "../constants/auth-bypass";
 
 const initialApplicationLoading = (isCallingFromInitialAppLoad: boolean) => {
+
+    // Auth bypass - the store already holds a synthetic session, nothing to restore.
+    if (AUTH_BYPASS_ENABLED) {
+        return;
+    }
+
     if (
         isCallingFromInitialAppLoad && (
             window.location.pathname.includes('/internal') ||
@@ -49,6 +56,12 @@ const initialApplicationLoading = (isCallingFromInitialAppLoad: boolean) => {
 
 const newLoginProcess = async () => {
 
+    // Auth bypass - skip the identity provider and land on the home page.
+    if (AUTH_BYPASS_ENABLED) {
+        document.location.href = INTERNAL_ROUTES.HOME_PAGE;
+        return;
+    }
+
     try {
         const loginUrl = await getLoginUrl();
         console.log('Login URL: ', loginUrl);
@@ -83,6 +96,12 @@ export const mainLoginHandling = (token: string) => {
 
 
 const logoutAndRedirectToSessionExpirePage = () => {
+
+    // Auth bypass - the session never expires, keep the user where they are.
+    if (AUTH_BYPASS_ENABLED) {
+        return;
+    }
+
     logout().finally(() => {
         clearLocalStorage();
         // store.dispatch(authActions.userLogout()); // This line does not need because hard reload automatically clear the store
@@ -93,11 +112,24 @@ const logoutAndRedirectToSessionExpirePage = () => {
 
 
 export const anotherTabAskToLogout = () => {
+
+    // Auth bypass - ignore logout broadcasts from other tabs.
+    if (AUTH_BYPASS_ENABLED) {
+        return;
+    }
+
     document.location.href = INTERNAL_ROUTES.SESSION_EXPIRE_PAGE;
 }
 
 
 const logoutAndRedirectToLoginPage = () => {
+
+    // Auth bypass - there is no login page to go back to, reload the home page.
+    if (AUTH_BYPASS_ENABLED) {
+        document.location.href = INTERNAL_ROUTES.HOME_PAGE;
+        return;
+    }
+
     logout().finally(() => {
         clearLocalStorage();
         store.dispatch(authActions.userLogout());
@@ -112,6 +144,11 @@ let idleTimeSetTimeInSeconds: number;
 
 
 const setIdleLogoutTimer = (matchToGlobalTimer = false) => {
+
+    // Auth bypass - no idle logout while authentication is switched off.
+    if (AUTH_BYPASS_ENABLED) {
+        return;
+    }
 
     if (store.getState().auth.isUserLogin) {
 

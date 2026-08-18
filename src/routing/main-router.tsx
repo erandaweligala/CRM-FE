@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouteObject, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Navigate, RouteObject, RouterProvider} from "react-router-dom";
 import {lazy, Suspense, useEffect, useState} from "react";
 import PrivateRoute from "./private-route";
 import INTERNAL_ROUTES from "../constants/internal-routes";
@@ -30,6 +30,7 @@ import ErrorBoundary from "../components/error-boundary/ErrorBoundary.tsx";
 import Configuration from "../pages/Configurations/Configuration.tsx";
 import Settings from "../pages/Configurations/components/Settings.tsx";
 import axios, { AxiosInstance } from "axios";
+import {AUTH_BYPASS_ENABLED} from "../constants/auth-bypass.ts";
 
 const Home = lazy(() => import("../pages/home/Home"));
 const Users = lazy(() => import("../pages/users-management/Users"));
@@ -102,14 +103,17 @@ const QuickComponent = () => {
 
 }
 
+// With the auth bypass on, the login flow is replaced by a redirect to the home page.
+const HOME_REDIRECT = <Navigate to={INTERNAL_ROUTES.HOME_PAGE} replace/>;
+
 const ROUTES: RouteObject[] = [
     {
         path: INTERNAL_ROUTES.LOGIN_PAGE,
-        element: <ErrorBoundary><Login/></ErrorBoundary>,
+        element: AUTH_BYPASS_ENABLED ? HOME_REDIRECT : <ErrorBoundary><Login/></ErrorBoundary>,
     },
     {
         path: INTERNAL_ROUTES.AUTH_CODE_RE_DIRECTION_PAGE,
-        element: <ErrorBoundary><AuthCodeHanding/></ErrorBoundary>,
+        element: AUTH_BYPASS_ENABLED ? HOME_REDIRECT : <ErrorBoundary><AuthCodeHanding/></ErrorBoundary>,
     },
     // {
     //    path: INTERNAL_ROUTES.GET_TEMP_TOKEN_PAGE_SUCCESS,
@@ -117,11 +121,11 @@ const ROUTES: RouteObject[] = [
     // },
     {
         path: INTERNAL_ROUTES.GET_TEMP_TOKEN_PAGE_ERROR,
-        element: <LoginError/>,
+        element: AUTH_BYPASS_ENABLED ? HOME_REDIRECT : <LoginError/>,
     },
     {
         path: INTERNAL_ROUTES.SESSION_EXPIRE_PAGE,
-        element: <SessionExpire/>,
+        element: AUTH_BYPASS_ENABLED ? HOME_REDIRECT : <SessionExpire/>,
     },
     {
         path: "",
