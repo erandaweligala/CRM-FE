@@ -5,6 +5,7 @@ import {clearTokenInterceptors, setTokenInterceptor} from "../services/axios.ser
 import jwt_decode from "jwt-decode";
 import AccessTokenModel from "../model/AccessToken.Model";
 import metaDataSlice from "./meta-data.slice";
+import {AUTH_BYPASS_ENABLED, BYPASS_SESSION} from "../constants/auth-bypass";
 import customerSlice from "./customer.slice";
 import { QuotationListResponseModel } from "../pages/enterprise/enterprise-crm/single-opportunity-page/components/quotation-drawer/models/response/quote-list-response-model";
 import { ParentQuoteList } from "../pages/enterprise/enterprise-crm/single-opportunity-page/components/quotation-drawer/models/quotes-response-body-model";
@@ -15,11 +16,19 @@ interface AuthState {
     decodedToken: AccessTokenModel | null;
 }
 
-const initialAuthStatus: AuthState = {
-    isUserLogin: false,
-    accessToken: null,
-    decodedToken: null
-}
+// With the auth bypass on, the app starts already "logged in" using a synthetic
+// session so the home page renders without going through Keycloak.
+const initialAuthStatus: AuthState = AUTH_BYPASS_ENABLED
+    ? {
+        isUserLogin: true,
+        accessToken: null,
+        decodedToken: BYPASS_SESSION
+    }
+    : {
+        isUserLogin: false,
+        accessToken: null,
+        decodedToken: null
+    }
 
 // tmf quotation information actions
 
@@ -55,6 +64,10 @@ const authSlice = createSlice({
             setTokenInterceptor();
         },
         userLogout(state) {
+            if (AUTH_BYPASS_ENABLED) {
+                // Never drop the synthetic session while the bypass is on.
+                return;
+            }
             state.isUserLogin = false;
             state.accessToken = null;
             clearTokenInterceptors()

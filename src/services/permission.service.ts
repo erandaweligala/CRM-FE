@@ -1,4 +1,5 @@
 import store from "../store/main-store";
+import {AUTH_BYPASS_ENABLED} from "../constants/auth-bypass";
 
 const getAllowedActions = (): number[] => {
 
@@ -25,6 +26,11 @@ const getAllowedAttributes = (): number[] => {
 
 export const hasPermissionToTheAction = (actionDetails: {actionId: number, isMainAction: boolean, mainActionId: number | null, componentId: number}): boolean => {
 
+    // Auth bypass - no authorization check is performed
+    if(AUTH_BYPASS_ENABLED) {
+        return true
+    }
+
     // For Development Usage
     if(actionDetails.actionId === 0) {
         return true
@@ -41,6 +47,11 @@ export const hasPermissionToAtLeastOneAction = (actionDetailList: {actionId: num
 
 export const hasPermissionToTheAttribute = (attributeDetails: {attributeId: number, parentActionId: number}): boolean => {
 
+    // Auth bypass - no authorization check is performed
+    if(AUTH_BYPASS_ENABLED) {
+        return true
+    }
+
     // For Development Usage
     if(attributeDetails.attributeId === 0) {
         return true
@@ -50,6 +61,11 @@ export const hasPermissionToTheAttribute = (attributeDetails: {attributeId: numb
 }
 
 export const hasPermissionToTheMenu= (menuDetails: {menuId: number}): boolean => {
+
+    // Auth bypass - every menu entry is visible
+    if(AUTH_BYPASS_ENABLED) {
+        return true
+    }
 
     if(menuDetails.menuId === 0) {
         return true

@@ -9,6 +9,7 @@ import {
 } from "./authentication-logic.service";
 import API_ENDPOINTS from "../constants/backend-endpoints";
 import {getNewAccessTokenFromCurrentAccessToken} from "./authentication-api.service";
+import {AUTH_BYPASS_ENABLED} from "../constants/auth-bypass";
 
 export const pendingApiCalls$ = new BehaviorSubject<number>(0);
 
@@ -32,6 +33,12 @@ const axiosInstance = axios.create({
 let setTokenInterceptorId: number;
 
 export const setTokenInterceptor = () => {
+
+    // Auth bypass - requests carry no bearer token and no token lifecycle is run.
+    if (AUTH_BYPASS_ENABLED) {
+        return;
+    }
+
     axiosInstance.interceptors.request.eject(setTokenInterceptorId);
 
     setTokenInterceptorId = axiosInstance.interceptors.request.use((requestConfig) => {
@@ -118,6 +125,7 @@ axiosInstance.interceptors.response.use(
         if (error.response?.request?.responseURL?.includes(API_ENDPOINTS.LOGOUT)) {
             return Promise.reject(new Error(error.message ?? 'Unknown error occurred'));
         } else if (
+            !AUTH_BYPASS_ENABLED &&
             error.response?.status &&
             (error.response.status === 403 || error.response.status === 401)
         ) {
@@ -195,6 +203,9 @@ export {axiosInstanceOfmDirectCall};
 export const setInterceptorsForAxiosInstance = (axiosInstance: AxiosInstance) => {
     setTokenInterceptorId = axiosInstance.interceptors.request.use((config) => {
         console.log('CRM: setTokenInterceptor() - Axios Interceptor: ', config.url);
+
+        // Auth bypass - forward the request untouched, no token is attached.
+        if (AUTH_BYPASS_ENABLED) return config;
 
         if (!store.getState().auth.isUserLogin) return config;
 
@@ -289,7 +300,7 @@ const handleUnauthorizedError = (error: any) => {
         return Promise.reject(new Error(error.message ?? 'Unknown error occurred'));
     }
 
-    if (status === 401 || status === 403) {
+    if (!AUTH_BYPASS_ENABLED && (status === 401 || status === 403)) {
         console.log('Unauthorized Response Received. Logout the User');
         logoutAndRedirectToSessionExpirePage();
     }
